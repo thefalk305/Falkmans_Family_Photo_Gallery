@@ -1,0 +1,232 @@
+body {
+  background: #444;
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px;
+}
+
+#photoGallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.info-card {
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #000;
+  box-shadow: 0px 0px 10px 2px rgba(0, 102, 0, 0.8);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.info-card.expanded {
+  background: #111;
+}
+
+.figure-card {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .image-wrapper,
+.bio-text {
+  width: 100%;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image-wrapper,
+.bio-text {
+  width: 100%;
+  transition: opacity 0.5s ease;
+}
+ */
+
+.image-wrapper,
+.bio-text {
+  width: 94%;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Start with image visible, bio hidden */
+.image-wrapper {
+  opacity: 1;
+  margin: auto;
+}
+
+.bio-text {
+  opacity: 0;
+  display: block; /* Always rendered, just hidden with opacity */
+  background: rgba(0, 0, 0, 0.85);
+  padding: 10px;
+  color: white;
+  pointer-events: none; /* Prevents interaction when hidden */
+}
+
+.bio-text p {
+  white-space: pre-line;
+}
+
+/* On click: fade image out, fade bio in */
+.info-card.expanded .image-wrapper {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.info-card.expanded .bio-text {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+.figure-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.bio-text {
+  display: none;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 10px;
+  color: white;
+}
+
+.info-card.expanded .image-wrapper {
+  display: none;
+}
+
+.info-card.expanded .bio-text {
+  display: block;
+  opacity: 1;
+}
+
+/* Bio Text Styles */
+.bio-text h2 {
+  margin: 10% 0;
+  font-size: 24px;
+  color: #888;
+}
+
+.bio-text h3 {
+  margin: 10% 0;
+  font-size: 16px;
+  color: #aaa;
+}
+
+.bio-text p {
+  margin-top: 10%;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.bio-snippet {
+  max-height: 14em;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  white-space: pre-line;
+}
+
+.bio-snippet.expanded {
+  max-height: 1000px; /* large enough to reveal full bio */
+}
+
+.toggle-bio {
+  margin-top: 0.5em;
+  background: none;
+  border: none;
+  color: #007acc;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 102, 0, 0.8);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 2em;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.modal-bio {
+  white-space: pre-line;
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+.modal-exit-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-exit-btn:hover {
+  background-color: #005f99;
+}
+
+.modal-bio-image-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-bio-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 102, 0, 0.7);
+}
+.modal-header {
+  display: flex;
+  flex-direction: row;            /* side-by-side layout */
+  justify-content: flex-start;    /* left-align the group */
+  align-items: center;            /* vertical center alignment */
+  gap: 40px;
+  margin-bottom: 20px;
+}

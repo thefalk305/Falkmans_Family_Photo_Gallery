@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Falkman Family Photo Gallery</title>
+
+  <link rel="icon" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="../css/styles.css">
+  <script type="module" src="./js/PhotoPages.js"></script>
+</head>
+
+<body>
+  <h1>Family Photo Gallery</h1>
+  <p style="text-align: center">Welcome to the Falkman Family Photo Gallery! Click on any photo to learn more about the family member.</p>
+  <div id="photoGallery"></div>
+  <div id="bioModal" class="modal">
+    <div class="modal-content modal-profile">
+      <div class="modal-header">
+        <div class="modal-info">
+          <h2 id="modalName"></h2>
+          <h3 id="modalBorn"></h3>
+        </div>
+        <div class="modal-bio-image-wrapper">
+          <img id="modalBioImage" src="" alt="Bio Photo" class="modal-bio-img">
+        </div>
+      </div>
+      <div class="modal-bio"></div>
+      <button class="modal-exit-btn">Close</button>
+    </div>
+  </div>
+</body>
+</html>
+<!-- 
+Suggested project structure for .html based projects:
+
+project-root/
+│
+├── index.html
+├── about.html          ← Additional HTML pages, if needed
+│
+├── css/                ← All stylesheets
+│   └── styles.css
+│
+├── js/                 ← All JavaScript files
+│   └── app.js
+│
+├── img/                ← Images (photos, icons, etc.)
+│   └── family1.jpg
+│   └── header-bg.png
+│
+├── data/               ← JSON or other structured data files
+│   └── photos.json
+│
+├── bio/                ← Text files or markdown bios (optional)
+│   └── anna.txt
+│   └── elijah.txt
+│
+└── assets/             ← Optional: fonts, audio, or grouped media
+    └── fonts/
+    └── audio/ -->
