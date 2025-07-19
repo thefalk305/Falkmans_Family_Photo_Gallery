@@ -1,30 +1,35 @@
 body {
-  background: #444;
-  margin: 0;
-  font-family: sans-serif;
+  margin: auto;
   color: white;
+  font-family: "Segoe UI", Tahoma, Helvetica, Arial, sans-serif;
+  height: 100%;
+  width: 90%;
+  background-color: rgb(248, 240, 224);
+  color: rgb(0, 0, 0);
+  margin: 70px;
+  padding: 0px;
+
 }
 
 h1 {
   text-align: center;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 #photoGallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;               /* Match his gap */
 }
 
 .info-card {
-  width: 250px;
+  max-width: 250px;
+
+  /* width: 250px; */
   border: 1px solid #ccc;
   border-radius: 10px;
-  background: #000;
-  box-shadow: 0px 0px 10px 2px rgba(0, 102, 0, 0.8);
-  cursor: pointer;
+  background: #fff;
+  box-shadow: 0px 0px 4px 0px rgba(0, 102, 0, 0.4);  cursor: pointer;
   overflow: hidden;
   transition: all 0.4s ease;
 }
@@ -40,22 +45,9 @@ h1 {
   flex-direction: column;
 }
 
-/* .image-wrapper,
-.bio-text {
-  width: 100%;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
 .image-wrapper,
 .bio-text {
   width: 100%;
-  transition: opacity 0.5s ease;
-}
- */
-
-.image-wrapper,
-.bio-text {
-  width: 94%;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
@@ -100,6 +92,7 @@ h1 {
 
 .bio-text {
   display: none;
+  width: 94%;
   background: rgba(0, 0, 0, 0.85);
   padding: 10px;
   color: white;
