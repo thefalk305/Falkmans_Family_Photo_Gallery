@@ -12,12 +12,12 @@
       "url": "http://localhost:5501",
       "webRoot": "${workspaceFolder}"
     },
-    //    {
-    //   "type": "node",
-    //   "request": "launch",
-    //   "name": "Debug buildPhotoPagesData",
-    //   "program": "${workspaceFolder}/js/buildPhotoPagesData.js"
-    // },
+       {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug buildPhotoPagesData",
+      "program": "${workspaceFolder}/js/buildPhotoPagesData.js"
+    },
     // {
     //   "type": "chrome",
     //   "request": "launch",
