@@ -12,6 +12,13 @@
       "url": "http://localhost:5501",
       "webRoot": "${workspaceFolder}"
     },
+    {
+      "name": "Run Excel to JSON.py",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/py/Excel to JSON.py",
+      "console": "integratedTerminal"
+    }
        {
       "type": "node",
       "request": "launch",
