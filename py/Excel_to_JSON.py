@@ -9,6 +9,6 @@ df = pd.read_excel('InfoTableData.xlsx')
 df.columns = df.columns.str.strip().str.replace('info_id', 'id')
 
 # Convert to JSON
-df.to_json('infotable.json', orient='records', indent=2)
+df.to_json('data/infotable.json', orient='records', indent=2)
 
 print("Excel successfully converted to JSON!")

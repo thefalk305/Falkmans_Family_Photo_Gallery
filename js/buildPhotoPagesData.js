@@ -1,6 +1,11 @@
 // buildPhotoPagesData.js - Run this script from the /js folder.
 // This script builds a JSON file containing PhotoPages data from infotable.json.
-// It reads each infotable record, extracts the necessary fields (name, pic, born) and writes it to PhotoPagesData.json along with the contents of the file pointed to by the bio field.
+// It reads each infotable record, extracts the necessary fields (name, pic, born) and writes it to PhotoPagesData.json along with the contents of the text file pointed to by the bio field.
+// The infotable is expected to have fields: pic, name and born.
+// If a record is missing any of these fields, it is skipped.
+// If a record has a duplicate pic, it is also skipped.
+// The bio field is optional; if it exists, the script reads the corresponding text file and
+// includes its contents in the output JSON.  If it doesn't exist, a default message is written to bioText.
 // The output file is used in the PhotoPages.html to display the family photo gallery.
 
 import infoTable from '../data/infotable.json' with { type: 'json' };

@@ -13,10 +13,10 @@
       "webRoot": "${workspaceFolder}"
     },
     {
-      "name": "Run Excel to JSON.py",
+      "name": "Run Excel_to_JSON.py",
       "type": "debugpy",
       "request": "launch",
-      "program": "${workspaceFolder}/py/Excel to JSON.py",
+      "program": "${workspaceFolder}/py/Excel_to_JSON.py",
       "console": "integratedTerminal"
     }
        {
